@@ -1,6 +1,6 @@
 {
   "name": "@frsource/vite-plugin-vue-dedupe-css-modules",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vite plugin that removes duplicated CSS modules from your Vue JS bundle..",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

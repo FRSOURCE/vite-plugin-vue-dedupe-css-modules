@@ -13,10 +13,10 @@ export default function dedupeCSSModulesPlugin(options = {}): Plugin {
 
   return {
     name: "vite:vue-dedupe-css-modules",
-    transform(source, id) {
+    transform(source: string, id: string) {
       if (!filter(id)) return null;
       const regexReplace =
-        /(import .+? from "([^"]+?)\?vue&type=style&index=.+?&src=)(.+?)(&lang\.module\..+?")/g;
+        /(import .+? from "([^"]+?)\?vue&type=style&index=)(.+?&src=.+?)(&lang\.module\..+?")/g;
 
       return {
         code: source.replace(regexReplace, (_match, g1, g2, g3, g4) => {
